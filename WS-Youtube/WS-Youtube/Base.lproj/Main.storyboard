@@ -22,22 +22,67 @@
                                     <constraint firstAttribute="width" secondItem="c1i-Pe-jE5" secondAttribute="height" multiplier="16:9" id="h1a-xH-S2c"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-8K-AUC">
+                                <rect key="frame" x="124.5" y="377" width="165" height="136"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="elB-8j-36m">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Xw-sN-spi">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="fXQ-Bv-jH2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hA3-82-Irc"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21M-9l-oyz">
+                                                <rect key="frame" x="135" y="0.0" width="30" height="34"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7u-2e-e5j"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-Fk-6lm">
+                                        <rect key="frame" x="0.0" y="55" width="165" height="30"/>
+                                        <state key="normal" title="pause"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fL1-6Q-Yql"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-Hb-wx9">
+                                        <rect key="frame" x="0.0" y="106" width="165" height="30"/>
+                                        <state key="normal" title="stop"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBl-kE-uST"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aLr-8K-AUC" firstAttribute="top" secondItem="c1i-Pe-jE5" secondAttribute="bottom" id="FHR-VC-IgV"/>
                             <constraint firstItem="c1i-Pe-jE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KYy-ZC-Ewa"/>
                             <constraint firstItem="c1i-Pe-jE5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="KeL-OD-1zE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c1i-Pe-jE5" secondAttribute="trailing" id="OCx-dY-Rjm"/>
+                            <constraint firstItem="aLr-8K-AUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xv4-Zq-WF1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="textField" destination="7Xw-sN-spi" id="oDA-s9-7OU"/>
                         <outlet property="youtubeView" destination="c1i-Pe-jE5" id="GDC-W2-IRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>

@@ -7,5 +7,5 @@ target 'WS-Youtube' do
 
   # Pods for WS-Youtube
   pod 'YoutubePlayerView'
-
+  pod 'Starscream', '~> 4.0.0'
 end
